@@ -98,20 +98,24 @@
 % Contact Information
 \newcommand{\nametitle}[2]{%
     { \Huge #1 \textsc{#2} }
-
+    \par
     \medskip
 }
-\newcommand{\contactseparator}{
-    \quad\textbar\quad\hspace{1pt}
-}
-\newcommand{\email}[1]{\faIcon{envelope} \href{mailto:#1}{#1}}
-\newcommand{\phone}[1]{\faIcon{phone-alt} \href{tel:+1-#1}{#1}}
-\newcommand{\github}[1]{\faIcon{github} \href{https://github.com/#1/}{#1}}
-\newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{#1}}
-\newcommand{\location}[1]{\faIcon{map-marker-alt} #1}
+\newcommand{\contactseparator}{\hspace{4pt}\textbar\hspace{4pt}}
+
+\newcommand{\email}[1]{\faIcon{envelope}\,\href{mailto:#1}{#1}}
+\newcommand{\phone}[1]{\faIcon{phone-alt}\,\href{tel:+44-#1}{#1}}
+\newcommand{\github}[1]{\faIcon{github}\,\href{https://github.com/#1/}{#1}}
+\newcommand{\linkedin}[1]{\faIcon{linkedin}\,\href{https://linkedin.com/in/#1/}{#1}}
+\newcommand{\location}[1]{\faIcon{map-marker-alt}\,#1}
+
+
+
+
 % Experience/Achievements
 \newcommand{\tech}[1]{\textbf{#1}}
 \newcommand{\role}[2]{\textbf{#2 | \emph{#1}}}
+\newcommand{\roleAlternative}[1]{\textbf{#1}}
 \newcommand{\subrole}[4]{\emph{#1 (#2 - #3)} #4}
 \newcommand{\tenure}[2]{\textsc{#1} - \textsc{#2}}
 \newcommand{\achievement}[1]{%
@@ -122,6 +126,21 @@
 \newcommand{\experience}[5]{%
     \noindent\role{#1}{#2}\hfill\tenure{#3}{#4}\par
     #5
+    \vspace{7pt}
+}
+\newcommand{\experienceAlternative}[4]{%
+    \noindent\roleAlternative{#1}\hfill\tenure{#2}{#3}\par
+    #4
+    \vspace{7pt}
+}
+\newcommand{\publication}[5]{
+    \noindent \textbf{#1} \hfill \textsc{#2} \newline \textit{#3}, #4 \par
+    #5
+    \vspace{7pt}
+}
+\newcommand{\publicationInProgress}[4]{
+    \noindent \textbf{#1} \hfill \textsc{#2} \newline \textit{#3} \par
+    #4
     \vspace{7pt}
 }
 
