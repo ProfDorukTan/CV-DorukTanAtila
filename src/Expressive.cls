@@ -108,41 +108,55 @@
 \newcommand{\github}[1]{\faIcon{github}\,\href{https://github.com/#1/}{#1}}
 \newcommand{\linkedin}[1]{\faIcon{linkedin}\,\href{https://linkedin.com/in/#1/}{#1}}
 \newcommand{\location}[1]{\faIcon{map-marker-alt}\,#1}
-
-
-
-
-% Experience/Achievements
-\newcommand{\tech}[1]{\textbf{#1}}
-\newcommand{\role}[2]{\textbf{#2 | \emph{#1}}}
-\newcommand{\roleAlternative}[1]{\textbf{#1}}
-\newcommand{\subrole}[4]{\emph{#1 (#2 - #3)} #4}
 \newcommand{\tenure}[2]{\textsc{#1} - \textsc{#2}}
+
+% Achievements
 \newcommand{\achievement}[1]{%
     \begin{itemize}
         \small{\item #1}
     \end{itemize}
 }
-\newcommand{\experience}[5]{%
-    \noindent\role{#1}{#2}\hfill\tenure{#3}{#4}\par
-    #5
+
+% Education
+\newcommand{\education}[6]{%
+    \noindent\textbf{#1} \emph{--- #2} \hfill \tenure{#3}{#4}\par % Degree and Institution name with dates aligned
+    \noindent\textit{GPA: #5} \par% GPA and extra details (like Honors)
+    \noindent Relevant Units: \textit{#6}\par % Fixed text "Relevant Units:" followed by the provided units
     \vspace{7pt}
 }
-\newcommand{\experienceAlternative}[4]{%
-    \noindent\roleAlternative{#1}\hfill\tenure{#2}{#3}\par
-    #4
+
+
+% Work experience
+\newcommand{\workexperience}[6]{%
+    \noindent\textbf{#1} \hfill \tenure{#2}{#3}\par % Job title and dates
+    \noindent\textit{#4}\par % Company name and location italicized
+    \noindent #5\par % Description of the experience
+    \vspace{3pt}
+    \noindent Skills Used: \textit{#6} % Skills used, bolded, no bullet points
     \vspace{7pt}
 }
-\newcommand{\publication}[5]{
-    \noindent \textbf{#1} \hfill \textsc{#2} \newline \textit{#3}, #4 \par
-    #5
+
+
+
+% Publications
+\newcommand{\publication}[4]{%
+    \noindent\textbf{#1}\hfill\textsc{#2}\par % Paper title and year aligned
+    \noindent Published in \textit{#3}\par % Place of publication italicized
+    \vspace{3pt}
+    \noindent Skills Used: \textit{#4} % Skills used, bolded and no bullet points
     \vspace{7pt}
 }
-\newcommand{\publicationInProgress}[4]{
-    \noindent \textbf{#1} \hfill \textsc{#2} \newline \textit{#3} \par
-    #4
+
+% Projects
+\newcommand{\project}[5]{%
+    \noindent\textbf{#1}\hfill\tenure{#2}{#3}\par % Title and Date aligned
+    \noindent#4\par % Project description in normal text
+    \vspace{3pt}
+    \noindent Skills Used: \textit{#5} % No bullet points, bold Skills Used
     \vspace{7pt}
 }
+
+
 
 %% ----- Four Required Configurations -----
 \renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
