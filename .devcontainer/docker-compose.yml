@@ -5,7 +5,7 @@ services:
     build: .
     image: latexdevcontainer
     volumes:
-      - ../:/workspace
+      - C:/Users/doruk/OneDrive/source/repos/ProfDorukTan/CV-DorukTanAtila:/workspace
       # Docker socket to access Docker server
       - /var/run/docker.sock:/var/run/docker.sock
       # SSH directory
