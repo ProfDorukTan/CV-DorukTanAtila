@@ -143,7 +143,7 @@
     \noindent\textbf{#1}\hfill\textsc{#2}\par % Paper title and year aligned
     \noindent Published in \textit{#3}\par % Place of publication italicized
     \vspace{3pt}
-    \noindent Skills Used: \textit{#4} % Skills used, bolded and no bullet points
+    \noindent {#4} % Skills used, bolded and no bullet points
     \vspace{7pt}
 }
 
